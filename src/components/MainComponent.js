@@ -9,7 +9,7 @@ AOS.init()
 
 const Main = () => {
   return(
-    <div className="container">
+    <div>
       <Home />
       <About />
       <RulesInstructions />
