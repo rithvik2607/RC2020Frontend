@@ -30,6 +30,10 @@ body {
   color: #4A90E2;
 }
 
+.dashboardBlue {
+  background-color: #1A68A1;
+}
+
 .accordion__button {
   background-color: #3F4242 !important;
   color: white !important;
