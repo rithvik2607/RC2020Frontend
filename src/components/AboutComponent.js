@@ -12,10 +12,10 @@ const About = () => {
     <section style={sectionStyle}>
       <div className="py-16 lg:py-32">
           <div className="mx-6 lg:mx-32">
-            <img data-aos="fade-left" data-aos-delay="50" data-aos-duration="300" className="float-left mr-16" src="assets/images/rc.jpeg" alt="about" />
+            <img data-aos="fade-left" data-aos-delay="50" data-aos-duration="300" className="mr-16" src="assets/images/esrerst.jpg" alt="about" />
             <div data-aos="fade-right" data-aos-delay="50" data-aos-duration="300">
-              <p className="text-white DM700 text-4xl mb-8 lg:mb-16">Reverse Coding is bOmB aF</p>
-              <p className="text-gray-400 DM400 lg:text-xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc diam sit arcu vitae. Nisi, metus, adipiscing sit rhoncus sed. Massa, scelerisque vel hac vel.<br /><br /> Amet posuere turpis phasellus tortor, id. Vel mauris metus dictum suspendisse quis ac ullamcorper. Nisl augue ut maecenas quis blandit. In sit laoreet odio risus posuere ultrices eget. Quam lacus vestibulum, commodo porta non.<br /><br /> Non metus etiam id faucibus. Gravida massa lobortis varius aliquam rutrum lectus consectetur. Vel, pharetra, nisl semper</p>
+              <p className="text-white DM700 text-4xl mb-8 lg:mt-8 lg:mb-8">Reverse Coding is bOmB aF</p>
+              <p className="text-gray-400 DM400 lg:text-xl">ACM-VIT is one of the most reputed and active technical chapters in VIT. We strongly believe that in teaching others, we learn ourselves which is why we conduct several events every year ranging from thrilling hackathons to informative workshops.<br /><br />One such event is Reverse Coding, an exhilarating coding contest that will truly challenge your logical and mathematical skills. Participants would be given runnable files that display the input-output test cases and they would need to come up with a code that will fulfil those cases. So, get ready to battle it out in the first round which will take place on 18th December 2020 and subsequently, the second round which will take place on 20th December 2020.</p>
             </div>
           </div>
       </div>

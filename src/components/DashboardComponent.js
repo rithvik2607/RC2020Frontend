@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import Background from '../bgs/ellipse-1.png';
+import axios from 'axios';
+import { baseUrl } from '../shared/baseUrl';
 
 import CTeam from './CreateTeamComponent';
 import JTeam from './JoinTeamComponent';
@@ -10,6 +12,8 @@ var sectionStyle = {
   backgroundRepeat: "no-repeat",
   width: "100%"
 }
+
+axios.get(`${baseUrl}/team/showteam`, )
 
 class Dashboard extends Component {
   constructor(props) {

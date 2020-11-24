@@ -1,0 +1,1 @@
+export const baseUrl = 'https://reverse-coding-2020.herokuapp.com/'
