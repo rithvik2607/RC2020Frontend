@@ -3,13 +3,12 @@ import Background from '../bgs/ellipse-1.png';
 
 var sectionStyle = {
   backgroundImage: `url(${Background})`,
-  backgroundRepeat: "no-repeat",
-  width: "100%"
+  backgroundRepeat: "no-repeat"
 }
 
 const Header = () => {
   return(
-    <section style={sectionStyle} className="container mx-auto">
+    <section style={sectionStyle}>
       <div className="pb-24">
           <div className="lg:flex lg:justify-between mx-16 lg:mx-32 mt-2">
             <img className="lg:h-12 lg:w-60" src="assets/images/logo.png" alt="logo" />

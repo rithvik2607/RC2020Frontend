@@ -4,8 +4,7 @@ import dots from '../bgs/frame-1.png';
 var sectionStyle = {
   backgroundImage: `url(${dots})`,
   backgroundRepeat: "no-repeat",
-  backgroundPosition: "right",
-  width: "100%"
+  backgroundPosition: "right"
 }
 
 const About = () => {

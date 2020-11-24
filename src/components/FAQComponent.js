@@ -18,7 +18,7 @@ const FAQ = () => {
     return(
       <AccordionItem data-aos="fade-up" data-aos-delay="150" data-aos-duration="300" key={item.id} className="my-8 mx-8 lg:mx-28">
         <AccordionItemHeading className="">
-          <AccordionItemButton className="rounded-lg transition duration-300 transform translate-y-2 shadow-lg p-6 DM400 text-xl accordion__button">
+          <AccordionItemButton className="rounded-lg focus:outline-none transition duration-300 transform translate-y-2 shadow-lg p-6 DM400 text-xl accordion__button">
             {item.question}
           </AccordionItemButton>
         </AccordionItemHeading>
