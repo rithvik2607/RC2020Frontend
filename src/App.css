@@ -8,6 +8,12 @@ body {
   font-weight: normal;
 }
 
+.DM400italic {
+  font-family: DM Sans;
+  font-style: italic;
+  font-weight: normal;
+}
+
 .DM500 {
   font-family: DM Sans;
   font-style: normal;
