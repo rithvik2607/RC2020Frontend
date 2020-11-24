@@ -64,20 +64,20 @@ class Dashboard extends Component {
           <a href="#"><div className="hidden lg:block transition duration-300 ease=in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 dashboardBlue text-white DM400 mt-4 text-justify">Logout</div></a>
         </div>
         <div className="flex justify-between mx-6 lg:mx-32 mt-8">
-          <div>
+          <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
             <p className="text-white DM400 text-lg lg:text-3xl">Team</p>
             <p className="text-gray-500 DM700 text-2xl lg:text-5xl">Unknown</p>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="200">
             <p className="text-white DM400 text-lg lg:text-3xl">Position</p>
             <p className="text-gray-500 DM700 text-2xl lg:text-5xl">Unknown</p>
           </div>
-          <div>
+          <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="300">
             <p className="text-white DM400 text-lg lg:text-3xl">Score</p>
             <p className="text-white DM700 text-2xl lg:text-5xl">0</p>
           </div>
         </div>
-        <div className="lg:grid lg:grid-cols-3 lg:mt-8 mx-6 lg:mx-32">
+        <div data-aos="fade-right" data-aos-duration="300" data-aos-delay="400" className="lg:grid lg:grid-cols-3 lg:mt-8 mx-6 lg:mx-32">
           <div className="lg:col-span-1">
             <div>
               <div className="lg:mb-8">
@@ -118,7 +118,7 @@ class Dashboard extends Component {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-2 -ml-4">
+          <div data-aos="fade-left" data-aos-duration="300" data-aos-delay="500" className="lg:col-span-2 -ml-4">
             <div className={(this.state.joinTeamOpen ? "flex" : "hidden")}>
               <JTeam />
             </div>
