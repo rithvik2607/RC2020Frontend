@@ -9,7 +9,7 @@ AOS.init()
 
 const Main = () => {
   return(
-    <div>
+    <div className="overflow-hidden">
       <Home />
       <About />
       <RulesInstructions />
