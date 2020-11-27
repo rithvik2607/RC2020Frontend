@@ -66,21 +66,7 @@ class Dashboard extends Component {
   }
 
   logout = () => {
-    axios({
-      method: 'get',
-      url: '/logout',
-      baseURL: baseUrl,
-      headers: { 'auth-token': authToken }
-    })
-      .then((response) => {
-        document.location.href = "https://acm-reverse-coding.web.app/";
-      }, (err) => {
-        return(
-          <div className="DM400 text-white text-center text-xl transition duration-300 ease-in-out opacity">
-            {err}
-          </div>
-        );
-      });
+    document.location.href = "https://acm-reverse-coding.web.app/"  
   }
 
   render() {
