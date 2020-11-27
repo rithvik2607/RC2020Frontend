@@ -65,8 +65,22 @@ class Dashboard extends Component {
     e.target.focus();
   }
 
-  logout = function() {
-    document.location.href = "https://acm-reverse-coding.web.app/";
+  logout = () => {
+    axios({
+      method: 'get',
+      url: '/logout',
+      baseURL: baseUrl,
+      headers: { 'auth-token': authToken }
+    })
+      .then((response) => {
+        document.location.href = "https://acm-reverse-coding.web.app/";
+      }, (err) => {
+        return(
+          <div className="DM400 text-white text-center text-xl transition duration-300 ease-in-out opacity">
+            {err}
+          </div>
+        );
+      });
   }
 
   render() {
@@ -93,7 +107,7 @@ class Dashboard extends Component {
       <section style={sectionStyle} className="container mx-auto">
         <div className="flex justify-between mx-6 lg:mx-32 mt-2">
           <img className="lg:h-12 lg:w-60" src="assets/images/logo.png" alt="logo" />
-          <button onClick={this.logout} className="hidden md:block transition duration-300 ease=in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 dashboardBlue text-white DM400 mt-4 text-justify">Logout</button>
+          <button onClick={this.logout} className="hidden md:block transition duration-300 ease=in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 dashboardBlue focus:outline-none text-white DM400 mt-4 text-justify">Logout</button>
         </div>
         <div className="flex justify-between mx-6 lg:mx-32 mt-2 md:mt-8">
           <div data-aos="fade-up" data-aos-duration="300" data-aos-delay="100">
@@ -164,7 +178,7 @@ class Dashboard extends Component {
           </div>
         </div>
         <div className=" flex justify-center">
-          <button className="md:hidden transition duration-300 ease=in-out transform hover:scale-110 w-28 cursor-pointer rounded-lg px-8 py-2 dashboardBlue text-white DM400 mt-2 text-justify">Logout</button>
+          <button onClick={this.logout} className="md:hidden transition duration-300 ease=in-out transform hover:scale-110 w-28 cursor-pointer rounded-lg px-8 py-2 dashboardBlue focus:outline-none text-white DM400 mt-2 text-justify">Logout</button>
         </div>
       </section>
     );
