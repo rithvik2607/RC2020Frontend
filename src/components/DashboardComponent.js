@@ -69,8 +69,7 @@ class Dashboard extends Component {
     document.location.href = "https://acm-reverse-coding.web.app/"  
   }
 
-  render() {
-
+  componentDidMount() {
     axios({
       method: 'get',
       url: '/team/showteam',
@@ -88,7 +87,9 @@ class Dashboard extends Component {
       }, (err) => {
         console.log(err);
       });
+  }
 
+  render() {
     return(
       <section style={sectionStyle} className="container mx-auto">
         <div className="flex justify-between mx-6 lg:mx-32 mt-2">
