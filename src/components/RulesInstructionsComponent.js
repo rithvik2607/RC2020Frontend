@@ -48,13 +48,13 @@ const RulesInstructions = () => {
         data-aos='fade-down'
         data-aos-delay='250'
         data-aos-duration='300'
-        className='flex flex-col lg:flex-row justify-evenly items-center lg:items-start mx-28 mx-auto'
+        className='flex flex-col lg:flex-row justify-evenly items-center lg:items-start mx-auto'
       >
         <div className='relative my-10 lg:m-0 w-60 lg:w-auto'>
           <div className='DM500 text-lg lg:text-xl z-10 text-gray-300 mx-auto'>
             Register
           </div>
-          <div className='poppins300 z-0 transform text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-9 translate-y-2 lg:translate-y-0'>
+          <div className='poppins300 z-0 text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-9 translate-y-2 lg:translate-y-0'>
             01
           </div>
         </div>
@@ -64,7 +64,7 @@ const RulesInstructions = () => {
             <br />
             /Join a team
           </div>
-          <div className='poppins300 z-0 transform text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-24 lg:translate-x-20 translate-y-2 lg:translate-y-0'>
+          <div className='poppins300 z-0 text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-24 lg:translate-x-20 translate-y-2 lg:translate-y-0'>
             02
           </div>
         </div>
@@ -73,7 +73,7 @@ const RulesInstructions = () => {
             Invite a member
             <br /> to your team
           </div>
-          <div className='poppins300 z-0 transform text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-28 lg:translate-x-24 translate-y-2 lg:translate-y-0'>
+          <div className='poppins300 z-0 text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-28 lg:translate-x-24 translate-y-2 lg:translate-y-0'>
             03
           </div>
         </div>
@@ -81,7 +81,7 @@ const RulesInstructions = () => {
           <div className='DM500 text-lg lg:text-xl z-10 text-gray-300 mx-auto'>
             Check notifications in your <br /> dashboard to join a team.
           </div>
-          <div className='poppins300 z-0 transform text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-48 lg:translate-x-56 translate-y-2 lg:translate-y-0'>
+          <div className='poppins300 z-0 text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-48 lg:translate-x-56 translate-y-2 lg:translate-y-0'>
             04
           </div>
         </div>
