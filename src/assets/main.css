@@ -552,9 +552,9 @@ video {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   .container {
-    max-width: 1024px;
+    max-width: 1100px;
   }
 }
 
@@ -13951,7 +13951,7 @@ video {
 }
 
 .max-w-screen-lg {
-  max-width: 1024px;
+  max-width: 1100px;
 }
 
 .max-w-screen-xl {
@@ -29145,9 +29145,9 @@ video {
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1100px) {
     .sm\:container {
-      max-width: 1024px;
+      max-width: 1100px;
     }
   }
 
@@ -42544,7 +42544,7 @@ video {
   }
 
   .sm\:max-w-screen-lg {
-    max-width: 1024px;
+    max-width: 1100px;
   }
 
   .sm\:max-w-screen-xl {
@@ -57695,9 +57695,9 @@ video {
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1100px) {
     .md\:container {
-      max-width: 1024px;
+      max-width: 1100px;
     }
   }
 
@@ -71094,7 +71094,7 @@ video {
   }
 
   .md\:max-w-screen-lg {
-    max-width: 1024px;
+    max-width: 1100px;
   }
 
   .md\:max-w-screen-xl {
@@ -86228,7 +86228,7 @@ video {
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1100px) {
   .lg\:container {
     width: 100%;
   }
@@ -86245,9 +86245,9 @@ video {
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1100px) {
     .lg\:container {
-      max-width: 1024px;
+      max-width: 1100px;
     }
   }
 
@@ -99644,7 +99644,7 @@ video {
   }
 
   .lg\:max-w-screen-lg {
-    max-width: 1024px;
+    max-width: 1100px;
   }
 
   .lg\:max-w-screen-xl {
@@ -114795,9 +114795,9 @@ video {
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1100px) {
     .xl\:container {
-      max-width: 1024px;
+      max-width: 1100px;
     }
   }
 
@@ -128194,7 +128194,7 @@ video {
   }
 
   .xl\:max-w-screen-lg {
-    max-width: 1024px;
+    max-width: 1100px;
   }
 
   .xl\:max-w-screen-xl {
@@ -143345,9 +143345,9 @@ video {
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 1100px) {
     .\32xl\:container {
-      max-width: 1024px;
+      max-width: 1100px;
     }
   }
 
@@ -156744,7 +156744,7 @@ video {
   }
 
   .\32xl\:max-w-screen-lg {
-    max-width: 1024px;
+    max-width: 1100px;
   }
 
   .\32xl\:max-w-screen-xl {
