@@ -50,7 +50,7 @@ const Header = () => {
               event virtually
             </p>
             <p
-              className='DM400 text-center lg:text-left text-xl text-white text-left lg:mb-24'
+              className='DM400 text-center lg:text-left text-xl text-white lg:mb-24'
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-delay='150'
@@ -65,7 +65,7 @@ const Header = () => {
               className='mx-auto'
             >
               <div
-                className='transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-6 py-4 rcBlueBg text-white text-2xl DM400 mt-8 text-center w-64 mx-auto'
+                className='transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-6 py-4 rcBlueBg text-white text-2xl DM400 mt-8 text-center w-64 mx-auto lg:mx-0'
                 data-aos='fade-up'
                 data-aos-offset='0'
                 data-aos-delay='150'
