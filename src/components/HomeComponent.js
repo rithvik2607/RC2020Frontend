@@ -10,14 +10,14 @@ const Header = () => {
   return (
     <section style={sectionStyle}>
       <div className='pb-24'>
-        <div className='md:flex md:justify-center lg:justify-between mx-16 lg:mx-32 mt-2'>
+        <div className='md:flex md:justify-center lg:justify-between items-center mx-16 lg:mx-32 mt-2'>
           <img
-            className='mx-auto lg:h-12 lg:w-60'
+            className='mx-auto lg:m-0 lg:h-12 lg:w-60'
             src='assets/images/logo.png'
             alt='logo'
           />
           <a href='https://reverse-coding-2020.herokuapp.com/auth/google'>
-            <div className='hidden lg:block transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 rcBlueBg text-white DM400 mt-4 text-justify'>
+            <div className='hidden lg:block transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 rcBlueBg text-white DM400 text-justify'>
               Register or Sign In
             </div>
           </a>
