@@ -55,38 +55,38 @@ const RulesInstructions = () => {
         className='flex flex-col lg:flex-row justify-evenly items-center lg:items-start'
       >
         <div className='relative my-10 lg:m-0 w-60 lg:w-auto'>
-          <div className='DM500 text-base md:text-xl z-10 text-gray-300'>
+          <div className='DM500 text-center text-base md:text-xl z-10 text-gray-300'>
             Register
           </div>
-          <div className='poppins300 z-0 text-7xl sm:text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-24 translate-y-2 sm:translate-x-24 md:translate-x-28 lg:translate-y-0'>
+          <div className='poppins300 z-0 text-7xl sm:text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-20 translate-y-2 sm:translate-x-18 md:translate-x-20 lg:translate-x-12 lg:translate-y-0'>
             01
           </div>
         </div>
         <div className='relative my-10 lg:m-0 w-60 lg:w-auto'>
-          <div className='DM500 text-base md:text-xl z-10 text-gray-300'>
+          <div className='DM500 text-center text-base md:text-xl z-10 text-gray-300'>
             Create a team
             <br />
             /Join a team
           </div>
-          <div className='poppins300 z-0 text-7xl sm:text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-24 sm:translate-x-24 md:translate-x-28 lg:translate-x-20 translate-y-2 lg:translate-y-0'>
+          <div className='poppins300 z-0 text-7xl sm:text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-20 sm:translate-x-18 md:translate-x-20 lg:translate-x-20 translate-y-2 lg:translate-y-0'>
             02
           </div>
         </div>
         <div className='relative my-10 lg:m-0 w-60 lg:w-auto'>
-          <div className='DM500 text-base md:text-xl z-10 text-gray-300'>
+          <div className='DM500 text-center text-base md:text-xl z-10 text-gray-300'>
             Invite a member
             <br /> to your team
           </div>
-          <div className='poppins300 z-0 text-7xl sm:text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-24 sm:translate-x-24 md:translate-x-28 lg:translate-x-24 translate-y-2 lg:translate-y-0'>
+          <div className='poppins300 z-0 text-7xl sm:text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-20 sm:translate-x-18 md:translate-x-20 lg:translate-x-24 translate-y-2 lg:translate-y-0'>
             03
           </div>
         </div>
         <div className='relative my-10 lg:m-0 w-60y lg:w-auto'>
-          <div className='DM500 text-base md:text-xl z-10 text-gray-300'>
+          <div className='DM500 text-center text-base md:text-xl z-10 text-gray-300'>
             Check notifications in<br />
             your dashboard to join a team.
           </div>
-          <div className='poppins300 z-0 text-7xl sm:text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-24 sm:translate-x-24 md:translate-x-32 lg:translate-x-56 translate-y-4 lg:translate-y-0'>
+          <div className='poppins300 z-0 text-7xl sm:text-8xl rcBlue opacity-25 absolute top-0 -mt-8 transform translate-x-20 sm:translate-x-18 md:translate-x-24 lg:translate-x-56 translate-y-4 lg:translate-y-0'>
             04
           </div>
         </div>
