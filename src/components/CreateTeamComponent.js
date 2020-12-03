@@ -32,32 +32,44 @@ class CTeam extends Component {
       }
     })
       .then((response) => {
-        return(
-          <div className="DM400 text-white text-center text-xl transition duration-300 ease-in-out opacity">
-            {response}
-          </div>
-        );
+        window.location.reload();
       }, (err) => {
-        return(
-          <div className="DM400 text-white text-center text-xl transition duration-300 ease-in-out opacity">
-            {err}
-          </div>
-        );
+        console.log(err);
       });
+  }
+
+  setJoinTeamOpen = () => {
+    this.props.setJoinTeamOpen()
   }
 
   render() {
     return(
       <div>
-        <div className="rounded-2xl dashboardBlue py-20 md:py-24 md:px-4 lg:px-36">
-          <p className="DM700 text-2xl lg:text-5xl text-center text-white mb-2 lg:mb-4 -mt-16">Create Team</p>
-          <p className="DM400 text-gray-400 text-base lg:text-xl text-center mb-10 lg:mb-24">Lorem ipsum dolor sit amet</p>
-          <div className="rounded-2xl bg-black mx-20 py-6 px-4 md:px-20 lg:px-20">
+        <div className="rounded-3xl mx-auto lg:pt-1 pb-12">
+          <p className="DM700 text-2xl lg:text-5xl text-center text-white mb-1 lg:mb-4 mt-16">
+            Create Team
+          </p>
+          <p className="DM400 text-gray-400 text-base lg:text-xl text-center mb-4 lg:mb-20">
+            in order to proceed further
+          </p>
+          <div className="rounded-2xl mx-20 py-6 px-4 md:px-20 lg:px-20">
             <p className="DM400 text-white text-base lg:text-xl block">Enter team name</p>
-            <input value={this.state.value} onChange={this.handleChange} className="rounded-lg pl-1 bg-black block ring-2 h-6 w-40 lg:h-8 lg:w-64 ring-dashboardBlue focus:outline-none text-white"></input><br />
-            <button onClick={this.handleSubmit} className="dashboardBlue block px-6 py-2 h-10 w-40 lg:h-12 lg:w-64 rounded-lg focus:outline-none DM700 text-base lg:text-xl text-white">
+            <input 
+              value={this.state.value} 
+              onChange={this.handleChange} 
+              className="rounded-lg pl-1 bg-black block ring-2 h-6 w-40 lg:h-8 lg:w-64 ring-dashboardBlue focus:outline-none text-white"
+            >
+            </input>
+            <br />
+            <button 
+              onClick={this.handleSubmit} 
+              className="dashboardBlue block px-6 py-2 h-10 w-40 lg:h-12 lg:w-64 rounded-lg focus:outline-none DM700 text-base lg:text-xl text-white"
+            >
               Create Team
             </button>
+            <div className="DM700 text-white text-center text-sm md:text-base mt-1 lg:mt-4">
+              Or <button onClick={this.setJoinTeamOpen} className="DM700 focus:outline-none dashboardBlueText text-sm md:text-base underline">Join a team</button>
+            </div>
           </div>
         </div>
       </div>
