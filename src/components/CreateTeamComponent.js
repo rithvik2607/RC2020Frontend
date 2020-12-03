@@ -41,7 +41,7 @@ class CTeam extends Component {
   setJoinTeamOpen = () => {
     this.props.setJoinTeamOpen()
   }
-
+  
   render() {
     return(
       <div>
