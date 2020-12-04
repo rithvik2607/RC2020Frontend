@@ -14,8 +14,7 @@ var sectionStyle = {
 }
 
 let url = new URL(window.location);
-
-if(!sessionStorage.getItem('authToken')) {
+if(!sessionStorage.getItem('authToken') && window.location.href == 'https://acm-reverse-coding.web.app/loggedIn?token=') {
   const authToken = url.searchParams.get("token");
   sessionStorage.setItem("authToken", authToken);
 }
@@ -60,7 +59,7 @@ class LoggedIn extends Component {
       method: 'get',
       url: '/user/logout',
       baseURL: baseUrl,
-      headers: { 'auth-token': sessionStorage.getItem('kajebkjabekjbaekbfkbefbk') }
+      headers: { 'auth-token': sessionStorage.getItem('authToken') }
     })
       .then((response) =>{
         sessionStorage.clear();
@@ -71,49 +70,48 @@ class LoggedIn extends Component {
   }
 
   componentDidMount() {
-
-    window.addEventListener(
-      'message',
-      e => {
-        if (!(e.data.type === 'token')) return;
-        console.log(e.data.token);
-        sessionStorage.setItem('kajebkjabekjbaekbfkbefbk', e.data.token);
-        window.history.push("/loggedIn");
-      }, false);
-
     axios({
       method: 'get',
       url: '/team/showteam',
       baseURL: baseUrl, 
-      headers: { 'auth-token': sessionStorage.getItem('kajebkjabekjbaekbfkbefbk') }
+      headers: { 'auth-token': sessionStorage.getItem('authToken') }
     })
-      .then((response) => {
-        console.log(sessionStorage.getItem('kajebkjabekjbaekbfkbefbk'));
-        this.setState({
-        teamName: response.data.teamName,
-        isTeamLeader: response.data.admin,
-        score: response.data.score,
-        teamMate: response.data.teammateName,
-        teamID: response.data.TeamID,
-        name: response.data.name,
-        error: response.data.error,
-        loading: false
-        });
-        if(this.state.error) {
-          sessionStorage.clear();
-          window.location.href='https://acm-reverse-coding.web.app';
-        }
-        if(this.state.teamID !== null) {
-          this.setState({
-            joinTeamOpen: false,
-            createTeamOpen: false,
-            dashboardOpen: true,
-          });
-        }
-      }, (err) => {
+    .then((response) => {
+      console.log(sessionStorage.getItem('authToken'));
+      this.setState({
+      teamName: response.data.teamName,
+      isTeamLeader: response.data.admin,
+      score: response.data.score,
+      teamMate: response.data.teammateName,
+      teamID: response.data.TeamID,
+      name: response.data.name,
+      error: response.data.error
+      });
+      if(this.state.error) {
         sessionStorage.clear();
         window.location.href='https://acm-reverse-coding.web.app';
-      });
+      }
+    }, (err) => {
+      sessionStorage.clear();
+    });
+  
+  setTimeout(() => {
+    if(this.state.teamID) {
+      window.history.pushState({url: "" + url + ""},"","/loggedIn");
+      this.setState(state => ({
+        joinTeamOpen: false,
+        createTeamOpen: false,
+        dashboardOpen: true,
+        loading: false
+      }));
+    }
+    else {
+      window.history.pushState({url: "" + url + ""},"","/loggedIn");
+      this.setState(state => ({
+        loading: false
+      }));
+    }
+  }, 2500);
   }
 
   render() {

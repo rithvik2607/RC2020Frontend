@@ -1,4 +1,3 @@
-import axios from 'axios'
 import React from 'react'
 import Background from '../bgs/ellipse-1.png'
 
@@ -8,15 +7,6 @@ var sectionStyle = {
 }
 
 const Header = () => {
-
-  const logIn = () => {
-    window.open(
-      'https://reverse-coding-2020.herokuapp.com/auth/google',
-      'oauthWindow',
-      'height=640,width=400'
-      )
-  }
-
   return (
     <section style={sectionStyle}>
       <div className='pb-24'>
@@ -26,9 +16,11 @@ const Header = () => {
             src='assets/images/logo.svg'
             alt='logo'
           />
-          <div onClick={() => logIn()} className='hidden lg:block transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer rounded-lg px-8 py-2 rcBlueBg text-white DM400 text-justify'>
-            Register or Sign In
-          </div>
+          <a href='https://reverse-coding-2020.herokuapp.com/auth/google'>
+            <div className='hidden lg:block transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 rcBlueBg text-white DM400 text-justify'>
+              Register or Sign In
+            </div>
+          </a>
         </div>
         <div className='mx-6 md:mx-16 lg:mx-32'>
           <div
@@ -73,7 +65,6 @@ const Header = () => {
               className='mx-auto'
             >
               <div
-                onClick={() => logIn()}
                 className='block lg:hidden transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer rounded-lg px-6 py-4 rcBlueBg text-white text-base DM400 mt-8 text-center w-48 mx-auto lg:mx-0'
                 data-aos='fade-up'
                 data-aos-offset='0'
