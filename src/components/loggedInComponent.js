@@ -3,6 +3,7 @@ import Background from '../bgs/ellipse-1.png';
 import CTeam from './CreateTeamComponent';
 import JTeam from './JoinTeamComponent';
 import Dashboard from './DashboardComponent';
+import LoadingSpinner from './LoadingSpinnerComponent';
 import axios from 'axios';
 import { baseUrl } from '../shared/baseUrl';
 
@@ -24,6 +25,7 @@ class LoggedIn extends Component {
       createTeamOpen: true,
       dashboardOpen: false,
       isTeamLeader: false,
+      loading: true,
       teamName: 'Unknown',
       teamMate: '',
       teamID: '',
@@ -87,7 +89,13 @@ class LoggedIn extends Component {
         this.setState(state => ({
           joinTeamOpen: false,
           createTeamOpen: false,
-          dashboardOpen: true
+          dashboardOpen: true,
+          loading: false
+        }));
+      }
+      else {
+        this.setState(state => ({
+          loading: false
         }));
       }
     }, 2500);
@@ -116,7 +124,7 @@ class LoggedIn extends Component {
           className="flex content-center justify-center mt-10 lg:mt-14 mb-6 md:mb-18"
         >
           <div className = {(this.state.createTeamOpen ? "block" : "hidden")}>
-            <CTeam setJoinTeamOpen = {this.setJoinTeamOpen} />
+            {this.state.loading ? <LoadingSpinner /> : <CTeam setJoinTeamOpen = {this.setJoinTeamOpen} />}
           </div>
           <div className = {(this.state.joinTeamOpen ? "block" : "hidden")}>
             <JTeam setCreateTeamOpen = {this.setCreateTeamOpen} />
