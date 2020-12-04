@@ -66,6 +66,7 @@ class LoggedIn extends Component {
   }
 
   componentDidMount() {
+    window.history.replaceState({url: "" + url + ""},"","/loggedIn");
     if(!sessionStorage.getItem('authToken')) {
       const authToken = url.searchParams.get("token");
       sessionStorage.setItem("authToken", authToken);
@@ -77,6 +78,7 @@ class LoggedIn extends Component {
       headers: { 'auth-token': sessionStorage.getItem('authToken') }
     })
     .then((response) => {
+      
       this.setState({
       teamName: response.data.teamName,
       isTeamLeader: response.data.admin,
@@ -91,27 +93,20 @@ class LoggedIn extends Component {
         sessionStorage.clear();
         window.location.href='https://acm-reverse-coding.web.app';
       }
+      if(this.state.teamID !== null) {
+        this.setState({
+          joinTeamOpen: false,
+          createTeamOpen: false,
+          dashboardOpen: true,
+        });
+      }
+      if(sessionStorage.getItem('authToken') === null) {
+        window.location.href='https://acm-reverse-coding.web.app';
+      }
     }, (err) => {
       sessionStorage.clear();
+      window.location.href='https://acm-reverse-coding.web.app';
     });
-  
-  setTimeout(() => {
-    if(this.state.teamID) {
-      window.history.pushState({url: "" + url + ""},"","/loggedIn");
-      this.setState(state => ({
-        joinTeamOpen: false,
-        createTeamOpen: false,
-        dashboardOpen: true,
-        
-      }));
-    }
-    else {
-      window.history.pushState({url: "" + url + ""},"","/loggedIn");
-      this.setState(state => ({
-        loading: false
-      }));
-    }
-  }, 2500);
   }
 
   render() {

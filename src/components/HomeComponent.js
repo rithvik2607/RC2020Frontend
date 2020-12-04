@@ -9,8 +9,8 @@ var sectionStyle = {
 const Header = () => {
   return (
     <section style={sectionStyle}>
-      <div className='pb-24'>
-        <div className='md:flex md:justify-center lg:justify-between items-center mx-16 lg:mx-32 mt-2'>
+      <div className='pb-10 sm:pb-24'>
+        <div className='md:flex md:justify-center lg:justify-between items-center mx-16 lg:mx-32 pt-4'>
           <img
             className='mx-auto lg:m-0 lg:h-12 lg:w-60'
             src='assets/images/logo.svg'
@@ -32,12 +32,12 @@ const Header = () => {
             className='md:ml-8 lg:ml-0 lg:float-right'
           >
             <img
-              className='hidden lg:block mx-auto lg:mx-0'
+              className='block mx-auto lg:mx-0'
               src='assets/images/laptopKid.png'
               alt='laptopKid'
             />
           </div>
-          <div className='pt-10 lg:pt-32'>
+          <div className='pt-2 sm:pt-32'>
             <p
               className='DM400 text-center lg:text-left text-2xl lg:text-5xl text-white mb-4 lg:mb-16'
               data-aos='fade-up'

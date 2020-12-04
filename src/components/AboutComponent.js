@@ -10,7 +10,7 @@ var sectionStyle = {
 const About = () => {
   return (
     <section style={sectionStyle}>
-      <div className='py-16 lg:py-32'>
+      <div className='py-10 lg:py-32'>
         <div className='mx-6 md:mx-16 lg:mx-32'>
           <img
             data-aos='fade-zoom-in'
