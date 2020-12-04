@@ -10,7 +10,8 @@ class JTeam extends Component {
     super(props);
      
     this.state = {
-      teamID: ''
+      teamID: '',
+      errorMessage: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -34,7 +35,7 @@ class JTeam extends Component {
       .then((response) => {
         window.location.reload();
       }, (err) => {
-        console.log(err);
+        this.setState({errorMessage: err.message});
       });
   }
 
@@ -69,6 +70,9 @@ class JTeam extends Component {
             </button>
             <div className="DM700 text-white text-center text-sm md:text-base mt-1 lg:mt-4">
               Or <button onClick={this.setCreateTeamOpen} className="DM700 focus:outline-none dashboardBlueText text-sm md:text-base underline">Create a team</button>
+            </div>
+            <div>
+              <p className="DM700 text-red-400 text-center text-sm md:text-base mt-1 lg:mt-4">{this.state.errorMessage}</p>
             </div>
           </div>
         </div>

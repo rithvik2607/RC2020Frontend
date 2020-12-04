@@ -4,6 +4,14 @@ import axios from 'axios';
 import { baseUrl } from '../shared/baseUrl';
 
 class Dashboard extends Component {
+  constructor(props) {
+    super(props);
+
+
+    this.state = {
+      errorMessage: ''
+    };
+  }
 
   copyToClipboard = (e) => {
     this.textarea.select();
@@ -21,7 +29,7 @@ class Dashboard extends Component {
       .then((response) => {
         window.location.reload();
       }, (err) => {
-        console.log(err);
+        this.setState({errorMessage: err.message});
       });
   }
 
@@ -114,6 +122,9 @@ class Dashboard extends Component {
               Start Now
             </button>
           </a>
+        </div>
+        <div>
+          <p className="DM700 text-red-400 text-center text-sm md:text-base mt-1 lg:mt-4">{this.state.errorMessage}</p>
         </div>
         <div className="mt-10 md:mt-16">
           <p className="DM700 text-white text-lg text-center">Reach out to us</p>
