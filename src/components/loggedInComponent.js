@@ -14,10 +14,6 @@ var sectionStyle = {
 }
 
 let url = new URL(window.location);
-if(!sessionStorage.getItem('authToken') && window.location.href == 'https://acm-reverse-coding.web.app/loggedIn?token=') {
-  const authToken = url.searchParams.get("token");
-  sessionStorage.setItem("authToken", authToken);
-}
 
 class LoggedIn extends Component {
   constructor(props) {
@@ -70,6 +66,10 @@ class LoggedIn extends Component {
   }
 
   componentDidMount() {
+    if(!sessionStorage.getItem('authToken')) {
+      const authToken = url.searchParams.get("token");
+      sessionStorage.setItem("authToken", authToken);
+    }
     axios({
       method: 'get',
       url: '/team/showteam',
@@ -77,7 +77,6 @@ class LoggedIn extends Component {
       headers: { 'auth-token': sessionStorage.getItem('authToken') }
     })
     .then((response) => {
-      console.log(sessionStorage.getItem('authToken'));
       this.setState({
       teamName: response.data.teamName,
       isTeamLeader: response.data.admin,
@@ -85,7 +84,8 @@ class LoggedIn extends Component {
       teamMate: response.data.teammateName,
       teamID: response.data.TeamID,
       name: response.data.name,
-      error: response.data.error
+      error: response.data.error,
+      loading: false
       });
       if(this.state.error) {
         sessionStorage.clear();
@@ -102,7 +102,7 @@ class LoggedIn extends Component {
         joinTeamOpen: false,
         createTeamOpen: false,
         dashboardOpen: true,
-        loading: false
+        
       }));
     }
     else {
