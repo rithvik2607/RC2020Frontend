@@ -13,6 +13,13 @@ var sectionStyle = {
   width: "100%"
 }
 
+let url = new URL(window.location);
+
+if(!sessionStorage.getItem('authToken')) {
+  const authToken = url.searchParams.get("token");
+  sessionStorage.setItem("authToken", authToken);
+}
+
 class LoggedIn extends Component {
   constructor(props) {
     super(props);
