@@ -2,9 +2,6 @@ import React,{ Component } from 'react';
 import axios from 'axios';
 import { baseUrl } from '../shared/baseUrl';
 
-let url = new URL(window.location);
-let authToken = url.searchParams.get("token");
-
 class JTeam extends Component {
   constructor(props) {
     super(props);
@@ -27,7 +24,7 @@ class JTeam extends Component {
       method: 'post',
       url: 'team/joinateam',
       baseURL: baseUrl,
-      headers: { 'auth-token': authToken },
+      headers: { 'auth-token': sessionStorage.getItem('authToken') },
       data: {
         TeamID: this.state.teamID
       }

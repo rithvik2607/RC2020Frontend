@@ -24,7 +24,7 @@ class Dashboard extends Component {
       method: 'delete',
       url: '/team/deletetheteam',
       baseURL: baseUrl,
-      headers: { 'auth-token': this.props.authToken }
+      headers: { 'auth-token': sessionStorage.getItem('authToken') }
     })
       .then((response) => {
         window.location.reload();
@@ -36,14 +36,14 @@ class Dashboard extends Component {
   render() {
     return(
       <div className="my-auto mx-2 sm:mx-12 lg:mx-32">
-        <div className="sm:flex justify-between">
+        <div className="sm:flex sm:justify-between">
           <div 
             data-aos="fade-up" 
             data-aos-duration="300" 
             data-aos-delay="100"
           >
-            <p className="text-white DM700 text-base md:text-3xl">Team</p>
-            <p className="text-gray-500 DM700 dashboardBlueText text-sm md:text-3xl lg:text-5xl">{this.props.teamName}</p>
+            <p className="text-white DM700 text-base md:text-2xl lg:text-3xl">Team</p>
+            <p className="text-gray-500 DM700 dashboardBlueText text-sm md:text-3xl lg:text-5xl mb-4 sm:mb-0">{this.props.teamName}</p>
           </div>
           <div 
             data-aos="fade-up" 
@@ -69,7 +69,7 @@ class Dashboard extends Component {
             </p>
             <button 
               onClick={this.leaveTeam} 
-              className="DM700 text-sm md:text-lg lg:text-xl focus:outline-none dashboardBlueText underline"
+              className="DM700 text-sm md:text-lg lg:text-xl focus:outline-none dashboardBlueText underline mb-4 sm:mb-0"
             >
               Leave team
             </button>
@@ -129,10 +129,10 @@ class Dashboard extends Component {
         <div className="mt-10 md:mt-16">
           <p className="DM700 text-white text-lg text-center">Reach out to us</p>
           <div className="flex justify-center mt-8">
-            <a className="px-6 mx-auto lg:m-0" href="https://www.linkedin.com/company/acm-vit-chapter?trk=public_post_share-update_actor-text"><img src="assets/images/link.png" alt="linkedin" /></a>
-            <a className="px-6 mx-auto lg:m-0" href="https://twitter.com/ACM_VIT"><img src="assets/images/twit.png" alt="twitter" /></a>
-            <a className="px-6 mx-auto lg:m-0" href="https://www.facebook.com/ACM.VITU/?__xts__[0]=68.ARA65dIx9TOCijPmAX4VacMyTDqKi_W8-OAhWA6rA3ZCNc49KYCTCpaM0NtgAqM0oCW8k9YFcdIAYiJ9zLwaf5X1VrK4gkc4a47q1H3Zbk-pyP8PFD-32lIE0FYEM-G0U88_-i5dWkZJO7AYTMNWVWfhOX2eJyCWPqwRlMD8iso2AV8dmLfZzXdi3G6aQsU8kqpm7c0RrfbWkxILzt7DA6-gzl_Onl-GiXTtW5OAvMXHgqbctIxp776o5M9vLijshxUEX6RbqYKCoz1wlWDEukwdKLIVCAx0i6A8WkzWCNB753qsRVyu6bRXpKOQibzqdHgBgj38Ht7DTtEWIXBF"><img src="assets/images/facebook.png" alt="fb" /></a>
-            <a className="px-6 mx-auto lg:m-0" href="https://www.instagram.com/acmvit/"><img src="assets/images/instagram.png" alt="ig" /></a>
+            <a className="px-2 sm:px-6 lg:m-0" href="https://www.linkedin.com/company/acm-vit-chapter?trk=public_post_share-update_actor-text"><img src="assets/images/link.png" alt="linkedin" /></a>
+            <a className="px-2 sm:px-6 lg:m-0" href="https://twitter.com/ACM_VIT"><img src="assets/images/twit.png" alt="twitter" /></a>
+            <a className="px-2 sm:px-6 lg:m-0" href="https://www.facebook.com/ACM.VITU/?__xts__[0]=68.ARA65dIx9TOCijPmAX4VacMyTDqKi_W8-OAhWA6rA3ZCNc49KYCTCpaM0NtgAqM0oCW8k9YFcdIAYiJ9zLwaf5X1VrK4gkc4a47q1H3Zbk-pyP8PFD-32lIE0FYEM-G0U88_-i5dWkZJO7AYTMNWVWfhOX2eJyCWPqwRlMD8iso2AV8dmLfZzXdi3G6aQsU8kqpm7c0RrfbWkxILzt7DA6-gzl_Onl-GiXTtW5OAvMXHgqbctIxp776o5M9vLijshxUEX6RbqYKCoz1wlWDEukwdKLIVCAx0i6A8WkzWCNB753qsRVyu6bRXpKOQibzqdHgBgj38Ht7DTtEWIXBF"><img src="assets/images/facebook.png" alt="fb" /></a>
+            <a className="px-2 sm:px-6 lg:m-0" href="https://www.instagram.com/acmvit/"><img src="assets/images/instagram.png" alt="ig" /></a>
           </div>
         </div>
       </div>

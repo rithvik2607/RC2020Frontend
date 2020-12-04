@@ -25,7 +25,7 @@ const RulesInstructions = () => {
             <br />2 participants
           </div>
           <div 
-            className='poppins300 z-0 transform translate-x-16 md:translate-x-48 lg:translate-x-48 -translate-y-14 sm:-translate-y-20 text-7xl sm:text-8xl rcBlue opacity-25'
+            className='poppins300 z-0 transform translate-x-16 md:translate-x-48 lg:translate-x-48 -translate-y-16 sm:-translate-y-20 text-7xl sm:text-8xl rcBlue opacity-25'
           >
             01
           </div>
@@ -35,7 +35,7 @@ const RulesInstructions = () => {
             A participant can leave a
             <br /> team before the event starts 
           </div>
-          <div className='poppins300 z-0 transform translate-x-16 md:translate-x-48 lg:translate-x-48 -translate-y-14 sm:-translate-y-20 text-7xl sm:text-8xl rcBlue opacity-25'>
+          <div className='poppins300 z-0 transform translate-x-16 md:translate-x-48 lg:translate-x-48 -translate-y-16 sm:-translate-y-20 text-7xl sm:text-8xl rcBlue opacity-25'>
             02
           </div>
         </div>

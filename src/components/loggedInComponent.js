@@ -14,7 +14,11 @@ var sectionStyle = {
 }
 
 let url = new URL(window.location);
-let authToken = url.searchParams.get("token");
+
+if(!sessionStorage.getItem('authToken')) {
+  const authToken = url.searchParams.get("token");
+  sessionStorage.setItem("authToken", authToken);
+}
 
 class LoggedIn extends Component {
   constructor(props) {
@@ -55,9 +59,10 @@ class LoggedIn extends Component {
       method: 'get',
       url: '/user/logout',
       baseURL: baseUrl,
-      headers: { 'auth-token': authToken }
+      headers: { 'auth-token': sessionStorage.getItem('authToken') }
     })
       .then((response) =>{
+        sessionStorage.clear();
         document.location.href = "https://acm-reverse-coding.web.app/"
       }, (err) => {
         console.log(err);
@@ -69,7 +74,7 @@ class LoggedIn extends Component {
       method: 'get',
       url: '/team/showteam',
       baseURL: baseUrl, 
-      headers: { 'auth-token': authToken }
+      headers: { 'auth-token': sessionStorage.getItem('authToken') }
     })
       .then((response) => {
         this.setState({
@@ -81,11 +86,12 @@ class LoggedIn extends Component {
         name: response.data.name
         });
       }, (err) => {
-        console.log(err);
+        window.location.href='https://acm-reverse-coding.web.app';
       });
     
     setTimeout(() => {
       if(this.state.teamID) {
+        window.history.pushState({url: "" + url + ""},"","/loggedIn");
         this.setState(state => ({
           joinTeamOpen: false,
           createTeamOpen: false,
@@ -94,6 +100,7 @@ class LoggedIn extends Component {
         }));
       }
       else {
+        window.history.pushState({url: "" + url + ""},"","/loggedIn");
         this.setState(state => ({
           loading: false
         }));
@@ -136,7 +143,6 @@ class LoggedIn extends Component {
               teamMate = {this.state.teamMate}
               teamID = {this.state.teamID}
               name = {this.state.name}
-              authToken = {authToken}
             />
           </div>
         </div>
