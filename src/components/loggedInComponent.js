@@ -30,6 +30,7 @@ class LoggedIn extends Component {
       dashboardOpen: false,
       isTeamLeader: false,
       loading: true,
+      error: false,
       teamName: 'Unknown',
       teamMate: '',
       teamID: '',
@@ -77,14 +78,19 @@ class LoggedIn extends Component {
       headers: { 'auth-token': sessionStorage.getItem('authToken') }
     })
       .then((response) => {
+        console.log(sessionStorage.getItem('authToken'));
         this.setState({
         teamName: response.data.teamName,
         isTeamLeader: response.data.admin,
         score: response.data.score,
         teamMate: response.data.teammateName,
         teamID: response.data.TeamID,
-        name: response.data.name
+        name: response.data.name,
+        error: response.data.error
         });
+        if(this.state.error) {
+          window.location.href='https://acm-reverse-coding.web.app';
+        }
       }, (err) => {
         window.location.href='https://acm-reverse-coding.web.app';
       });
