@@ -25,7 +25,7 @@ const About = () => {
             data-aos-duration='300'
           >
             <p className='text-white DM700 text-4xl mb-8 mt-8'>
-              Reverse Coding is bOmB aF
+              About Reverse Coding
             </p>
             <p className='text-gray-400 DM400 lg:text-xl'>
               ACM-VIT is one of the most reputed and active technical chapters

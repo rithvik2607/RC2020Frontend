@@ -24,7 +24,7 @@ class JTeam extends Component {
       method: 'post',
       url: 'team/joinateam',
       baseURL: baseUrl,
-      headers: { 'auth-token': sessionStorage.getItem('authToken') },
+      headers: { 'auth-token': sessionStorage.getItem('kajebkjabekjbaekbfkbefbk') },
       data: {
         TeamID: this.state.teamID
       }

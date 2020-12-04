@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React from 'react'
 import Background from '../bgs/ellipse-1.png'
 
@@ -7,20 +8,27 @@ var sectionStyle = {
 }
 
 const Header = () => {
+
+  const logIn = () => {
+    window.open(
+      'https://reverse-coding-2020.herokuapp.com/auth/google',
+      'oauthWindow',
+      'height=640,width=400'
+      )
+  }
+
   return (
     <section style={sectionStyle}>
       <div className='pb-24'>
         <div className='md:flex md:justify-center lg:justify-between items-center mx-16 lg:mx-32 mt-2'>
           <img
             className='mx-auto lg:m-0 lg:h-12 lg:w-60'
-            src='assets/images/logo.png'
+            src='assets/images/logo.svg'
             alt='logo'
           />
-          <a href='https://reverse-coding-2020.herokuapp.com/auth/google'>
-            <div className='hidden lg:block transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 rcBlueBg text-white DM400 text-justify'>
-              Register or Sign In
-            </div>
-          </a>
+          <div onClick={() => logIn()} className='hidden lg:block transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer rounded-lg px-8 py-2 rcBlueBg text-white DM400 text-justify'>
+            Register or Sign In
+          </div>
         </div>
         <div className='mx-6 md:mx-16 lg:mx-32'>
           <div
@@ -32,25 +40,25 @@ const Header = () => {
             className='md:ml-8 lg:ml-0 lg:float-right'
           >
             <img
-              className='mx-auto lg:mx-0'
+              className='hidden lg:block mx-auto lg:mx-0'
               src='assets/images/laptopKid.png'
               alt='laptopKid'
             />
           </div>
-          <div className='lg:pt-32'>
+          <div className='pt-10 lg:pt-32'>
             <p
-              className='DM400 text-center lg:text-left text-4xl lg:text-5xl text-white mb-4 lg:mb-16'
+              className='DM400 text-center lg:text-left text-2xl lg:text-5xl text-white mb-4 lg:mb-16'
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-delay='150'
               data-aos-duration='300'
             >
               Join one of the
-              <p className='DM700 text-5xl rcBlue'>Biggest Competitve Coding</p>
+              <p className='DM700 text-3xl lg:text-5xl rcBlue'>Biggest Competitve Coding</p>
               event virtually
             </p>
             <p
-              className='DM400 text-center lg:text-left text-xl text-white lg:mb-24'
+              className='DM400 text-center lg:text-left text-base text-xl text-white lg:mb-24'
               data-aos='fade-up'
               data-aos-offset='0'
               data-aos-delay='150'
@@ -65,7 +73,8 @@ const Header = () => {
               className='mx-auto'
             >
               <div
-                className='transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-6 py-4 rcBlueBg text-white text-2xl DM400 mt-8 text-center w-64 mx-auto lg:mx-0'
+                onClick={() => logIn()}
+                className='block lg:hidden transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer rounded-lg px-6 py-4 rcBlueBg text-white text-base DM400 mt-8 text-center w-48 mx-auto lg:mx-0'
                 data-aos='fade-up'
                 data-aos-offset='0'
                 data-aos-delay='150'

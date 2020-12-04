@@ -24,7 +24,7 @@ class Dashboard extends Component {
       method: 'delete',
       url: '/team/deletetheteam',
       baseURL: baseUrl,
-      headers: { 'auth-token': sessionStorage.getItem('authToken') }
+      headers: { 'auth-token': sessionStorage.getItem('kajebkjabekjbaekbfkbefbk') }
     })
       .then((response) => {
         window.location.reload();

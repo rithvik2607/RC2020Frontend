@@ -24,7 +24,7 @@ class CTeam extends Component {
       method: 'post',
       url: 'team/createateam',
       baseURL: baseUrl,
-      headers: { 'auth-token': sessionStorage.getItem('authToken') },
+      headers: { 'auth-token': sessionStorage.getItem('kajebkjabekjbaekbfkbefbk') },
       data: {
         teamName: this.state.teamName
       }
