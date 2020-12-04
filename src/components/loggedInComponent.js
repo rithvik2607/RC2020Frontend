@@ -14,8 +14,7 @@ var sectionStyle = {
 }
 
 let url = new URL(window.location);
-
-if(!sessionStorage.getItem('authToken')) {
+if(!sessionStorage.getItem('authToken') && window.location.href == 'http://acm-reverse-coding.web.app/loggedIn?token=') {
   const authToken = url.searchParams.get("token");
   sessionStorage.setItem("authToken", authToken);
 }
