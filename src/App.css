@@ -55,6 +55,7 @@ body {
 
 .accordionHeader {
   background-color: #3F4242;
+  border-radius: 0.5rem !important;
 }
 
 .rcBlueBg {

@@ -33,13 +33,13 @@ const FAQ = () => {
          className=" accordionHeader"
          horizontalAlignment="spaceBetween"
         >
-          <div className="text-white DM400 text-base lg:text-xl md:ml-6">
+          <div className="text-white py-1 rounded-lg DM400 text-base lg:text-xl md:ml-6">
             {item.question}
           </div>
           <img className="float-right" src={(item.id === p ) ? "assets/images/close.svg" : "assets/images/open.svg"} alt="arrow" />
         </AccordionHeader>
         <AccordionPanel className="py-4">
-          <div className="rcBlueBg text-white DM400 text-base px-2 sm:px-8 py-1 sm:text-xl">{item.answer}</div>
+          <div className="rcBlueBg rounded-lg text-white DM400 text-base px-2 sm:px-8 py-1 sm:text-xl">{item.answer}</div>
         </AccordionPanel>
       </AccordionNode>
     );

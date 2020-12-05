@@ -58,10 +58,17 @@ class LoggedIn extends Component {
       headers: { 'auth-token': sessionStorage.getItem('authToken') }
     })
       .then((response) =>{
+        this.setState({
+          error: response.data.error
+        });
         sessionStorage.clear();
-        document.location.href = "https://acm-reverse-coding.web.app/"
+        document.location.href = "https://acm-reverse-coding.web.app/";
+        if(this.state.error) {
+          document.location.href = "https://acm-reverse-coding.web.app/";
+        }
       }, (err) => {
         console.log(err);
+        document.location.href = "https://acm-reverse-coding.web.app/";
       })
   }
 
@@ -88,6 +95,8 @@ class LoggedIn extends Component {
       error: response.data.error,
       loading: false
       });
+      console.log('fruitsAndVegetables');
+      console.log(this.state.error);
       if(this.state.error) {
         sessionStorage.clear();
         window.location.href='https://acm-reverse-coding.web.app';
