@@ -114,9 +114,9 @@ class Dashboard extends Component {
             <div className="px-1 sm:px-2 md:px-10 DM500 dashboardBlueText sm:text-xl">Sec</div>
           </div>
         </div>
-        <div className="flex justify-center mt-4">
-          <a href="#">
-            <button className="opacity-50 transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 dashboardBlue focus:outline-none text-white DM700 lg:mt-2 text-justify">
+        <div className="hidden flex justify-center mt-4">
+          <a className="hidden" href="#">
+            <button className="hidden opacity-50 transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 dashboardBlue focus:outline-none text-white DM700 lg:mt-2 text-justify">
               Start Now
             </button>
           </a>

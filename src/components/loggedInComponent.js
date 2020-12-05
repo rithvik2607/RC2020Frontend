@@ -71,6 +71,7 @@ class LoggedIn extends Component {
       const authToken = url.searchParams.get("token");
       sessionStorage.setItem("authToken", authToken);
     }
+    console.log('error');
     axios({
       method: 'get',
       url: '/team/showteam',
@@ -78,7 +79,6 @@ class LoggedIn extends Component {
       headers: { 'auth-token': sessionStorage.getItem('authToken') }
     })
     .then((response) => {
-      
       this.setState({
       teamName: response.data.teamName,
       isTeamLeader: response.data.admin,

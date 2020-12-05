@@ -30,8 +30,11 @@ class CTeam extends Component {
       }
     })
       .then((response) => {
-        this.setState({ errorMessage: response.data.message });
-        window.location.reload();
+        if(response.data.Message === undefined) {
+          window.location.reload();
+        } else {
+          this.setState({ errorMessage: response.data.Message });
+        }
       }, (err) => {
         this.setState({errorMessage: err.message});
       });
@@ -51,7 +54,7 @@ class CTeam extends Component {
           <p className="DM400 text-gray-400 text-base lg:text-xl text-center mb-4 lg:mb-20">
             in order to proceed further
           </p>
-          <div className="rounded-2xl sm:mx-20 py-6 px-4 md:px-20 lg:px-20">
+          <div className="rounded-2xl mx-16 sm:mx-20 py-6 px-4 md:px-20 lg:px-20">
             <p className="DM400 text-white text-sm lg:text-xl block">Enter team name</p>
             <input 
               value={this.state.value} 
@@ -71,7 +74,7 @@ class CTeam extends Component {
             </div>
           </div>
           <div>
-            <p className="DM700 text-red-400 text-center text-sm md:text-base mt-1 lg:mt-4">{this.state.errorMessage}</p>
+            <p className="DM700 text-red-400 text-center text-sm md:text-base mx-10 mt-1 lg:mt-4">{this.state.errorMessage}</p>
           </div>
         </div>
       </div>
