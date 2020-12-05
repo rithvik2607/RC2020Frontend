@@ -11,13 +11,22 @@ const About = () => {
   return (
     <section style={sectionStyle}>
       <div className='py-10 lg:py-32'>
-        <div className='mx-6 md:mx-16 lg:mx-32'>
+        <div className='flex flex-col items-center justify-center mx-6 md:mx-16 lg:mx-32'>
+          <img
+            data-aos='fade-zoom-in'
+            data-aos-delay='50'
+            data-aos-duration='300'
+            src='assets/images/esrerst.jpg'
+            alt='about'
+            className="md:hidden block"
+          />
           <img
             data-aos='fade-zoom-in'
             data-aos-delay='50'
             data-aos-duration='300'
             src='assets/images/esrerst.png'
             alt='about'
+            className="hidden md:block"
           />
           <div
             data-aos='fade-right'

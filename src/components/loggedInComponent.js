@@ -76,7 +76,12 @@ class LoggedIn extends Component {
     window.history.replaceState({url: "" + url + ""},"","/loggedIn");
     if(!sessionStorage.getItem('authToken')) {
       const authToken = url.searchParams.get("token");
-      sessionStorage.setItem("authToken", authToken);
+      if(authToken === null) {
+        sessionStorage.clear();
+        document.location.href = "https://acm-reverse-coding.web.app/";
+      } else {
+        sessionStorage.setItem("authToken", authToken);
+      }
     }
     axios({
       method: 'get',
