@@ -24,10 +24,10 @@ const About = () => {
             data-aos-delay='50'
             data-aos-duration='300'
           >
-            <p className='text-white DM700 text-4xl mb-8 mt-8'>
+            <p className='text-white text-center sm:text-left DM700 text-4xl mb-8 mt-8'>
               About Reverse Coding
             </p>
-            <p className='text-gray-400 DM400 lg:text-xl'>
+            <p className='text-gray-400 text-center sm:text-left DM400 lg:text-xl'>
               ACM-VIT is one of the most reputed and active technical chapters
               in VIT. We strongly believe that in teaching others, we learn
               ourselves which is why we conduct several events every year
