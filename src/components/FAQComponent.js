@@ -59,6 +59,7 @@ const FAQ = () => {
         <AccordionWithHeader 
           actionCallback={actionCallback}
           speed={100}
+          style={{marginBottom: 'none'}}
         >
           {question}
         </AccordionWithHeader>
