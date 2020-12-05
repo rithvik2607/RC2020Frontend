@@ -8,6 +8,7 @@ class CTeam extends Component {
      
     this.state = {
       teamName: '',
+      error: false,
       errorMessage: ''
     };
 
@@ -30,7 +31,7 @@ class CTeam extends Component {
       }
     })
       .then((response) => {
-        if(response.data.Message === undefined) {
+        if(response.data.error === false) {
           window.location.reload();
         } else {
           this.setState({ errorMessage: response.data.Message });

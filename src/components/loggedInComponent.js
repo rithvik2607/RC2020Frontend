@@ -71,7 +71,6 @@ class LoggedIn extends Component {
       const authToken = url.searchParams.get("token");
       sessionStorage.setItem("authToken", authToken);
     }
-    console.log('error');
     axios({
       method: 'get',
       url: '/team/showteam',

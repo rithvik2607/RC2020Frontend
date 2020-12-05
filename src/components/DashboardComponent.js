@@ -9,6 +9,7 @@ class Dashboard extends Component {
 
 
     this.state = {
+      error: false,
       errorMessage: ''
     };
   }
@@ -25,7 +26,11 @@ class Dashboard extends Component {
       headers: { 'auth-token': sessionStorage.getItem('authToken') }
     })
       .then((response) => {
-        window.location.reload();
+        if(response.data.error === false) {
+          window.location.reload();
+        } else {
+          this.setState({ errorMessage: response.data.Message });
+        }
       }, (err) => {
         this.setState({errorMessage: err.message});
       });
