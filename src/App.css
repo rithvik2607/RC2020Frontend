@@ -53,9 +53,8 @@ body {
   background: radial-gradient(117.11% 109.09% at 0% 2.2%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-.accordion__button {
-  background-color: #3F4242 !important;
-  color: white !important;
+.accordionHeader {
+  background-color: #3F4242;
 }
 
 .rcBlueBg {

@@ -1,10 +1,14 @@
-import React from 'react';
-import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel } from 'react-accessible-accordion';
+import React,{ useState } from 'react';
 import Background from '../bgs/ellipse-2.png';
+import {
+  AccordionWithHeader,
+  AccordionNode,
+  AccordionHeader,
+  AccordionPanel
+} from 'react-accordion-with-header';
+
 
 import { INFO } from '../dataStore';
-
-import 'react-accessible-accordion/dist/fancy-example.css';
 
 var sectionStyle = {
   backgroundImage: `url(${Background})`,
@@ -13,19 +17,31 @@ var sectionStyle = {
 }
 
 const FAQ = () => {
+  var [p, setP] = useState(undefined);
+
+  const actionCallback = (panels, state) => {
+    // fires any time headers are clicked and panels change state
+    // receives array of panels: [{ panel: 3, open: true }, { panel: 6, open: true }]
+    // and the AccordionWithHeader state
+    setP(p = state.active[0]);
+  }
 
   const question = INFO.map((item) => {
     return(
-      <AccordionItem data-aos="fade-up" data-aos-delay="150" data-aos-duration="300" key={item.id} className="my-4 mx-8 lg:mx-32">
-        <AccordionItemHeading>
-          <AccordionItemButton className="rounded-lg focus:outline-none transition duration-300 transform translate-y-2 lg:p-6 DM400 text-base sm:text-xl accordion__button">
+      <AccordionNode key={item.id} className="my-4 mx-8 sm:16 md:mx-32 lg:mx-48">
+        <AccordionHeader
+         className=" accordionHeader"
+         horizontalAlignment="spaceBetween"
+        >
+          <div className="text-white DM400 text-base lg:text-xl md:ml-6">
             {item.question}
-          </AccordionItemButton>
-        </AccordionItemHeading>
-        <AccordionItemPanel className="rcBlueBg rounded-b-lg text-white DM400 text-base sm:text-xl p-2 sm:p-4">
-          <p>{item.answer}</p>
-        </AccordionItemPanel>
-      </AccordionItem>
+          </div>
+          <img className="float-right" src={(item.id === p ) ? "assets/images/close.svg" : "assets/images/open.svg"} alt="arrow" />
+        </AccordionHeader>
+        <AccordionPanel className="py-4">
+          <div className="rcBlueBg text-white DM400 text-base px-2 sm:px-8 py-1 sm:text-xl">{item.answer}</div>
+        </AccordionPanel>
+      </AccordionNode>
     );
   });
 
@@ -33,12 +49,21 @@ const FAQ = () => {
   return(
     <section style={sectionStyle} className="pt-10 sm:pt-16">
       <div> 
-        <div data-aos="fade-down" data-aos-delay="50" data-aos-duration="300" className="rcBlue text-center DM700 text-2xl mb-0 sm:mb-10 lg:text-4xl">Frequently Asked Questions</div>
+        <div data-aos="fade-down" data-aos-delay="50" data-aos-duration="300" className="rcBlue text-center DM700 text-2xl mb-0 sm:mb-10 md:mb-24 lg:text-4xl">Frequently Asked Questions</div>
       </div>
-      <Accordion allowZeroExpanded={true}>
-        {question}
-      </Accordion>
-      <div className="lg:flex lg:justify-evenly mb-2">
+      <div
+        data-aos="fade-up" 
+        data-aos-delay="150" 
+        data-aos-duration="300" 
+      >
+        <AccordionWithHeader 
+          actionCallback={actionCallback}
+          speed={100}
+        >
+          {question}
+        </AccordionWithHeader>
+      </div>
+      <div className="lg:flex lg:justify-evenly mt-16 mb-2">
         <a href="https://vit.ac.in/" target="_blank" rel="noopener noreferrer"><img className="my-4 h-16 w-48 mx-auto lg:mx-0" src="assets/images/vit-white-2.svg" alt="vit" /></a>
         <a href="https://acmvit.in/" target="_blank" rel="noopener noreferrer"><img className="my-4 h-16 w-48 mx-auto lg:mx-0" src="assets/images/acm-white-2.svg" alt="acm" /></a>
         <div className="flex lg:justify-evenly my-8">
