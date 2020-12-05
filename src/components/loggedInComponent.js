@@ -111,7 +111,7 @@ class LoggedIn extends Component {
   render() {
     return(
       <div style={sectionStyle}>
-        <div className="flex justify-center lg:justify-between items-center mx-6 lg:mx-32 mt-2">
+        <div className="flex justify-center lg:justify-between items-center lg:mx-32 mt-2">
           <img 
             className="lg:h-12 lg:w-60" 
             src="assets/images/logo.svg" 
