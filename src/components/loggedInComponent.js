@@ -100,8 +100,6 @@ class LoggedIn extends Component {
       error: response.data.error,
       loading: false
       });
-      console.log('fruitsAndVegetables');
-      console.log(this.state.error);
       if(this.state.error) {
         sessionStorage.clear();
         window.location.href='https://acm-reverse-coding.web.app';

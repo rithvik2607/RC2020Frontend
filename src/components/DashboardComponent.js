@@ -38,7 +38,7 @@ class Dashboard extends Component {
 
   render() {
     return(
-      <div className="my-auto mx-2 sm:mx-12 lg:mx-32">
+      <div className="mx-2 sm:mx-12 lg:mx-32">
         <div className="flex-col items-center justify-center flex sm:flex-row sm:items-stretch sm:justify-between">
           <div 
             data-aos="fade-up" 
@@ -70,7 +70,15 @@ class Dashboard extends Component {
                 alt="crown" 
               />
             </p>
-            <div className="flex justify-center sm:justify-start mx-6 sm:mx-0 items-center">
+            <div className="flex justify-center sm:flex-none sm:hidden mx-6 sm:mx-0 items-center">
+              <button 
+                onClick={this.leaveTeam} 
+                className="DM700 text-sm md:text-lg lg:text-xl focus:outline-none dashboardBlueText underline mb-4 sm:mb-0"
+              >
+                Leave team
+              </button>
+            </div>
+            <div className="hidden sm:block mx-6 sm:mx-0 items-center">
               <button 
                 onClick={this.leaveTeam} 
                 className="DM700 text-sm md:text-lg lg:text-xl focus:outline-none dashboardBlueText underline mb-4 sm:mb-0"
@@ -110,15 +118,15 @@ class Dashboard extends Component {
           <br />
           <div className="flex justify-center">
             <Countdown 
-              className="DM500 dashboardBlueText text-xl sm:text-3xl md:text-7xl tracking-widest" 
-              date = '2020-12-18T12:00:00' 
+              className="DM500 dashboardBlueText sticky text-xl sm:text-3xl md:text-7xl tracking-widest" 
+              date = '2020-12-18T12:00:00'
             />
           </div>
           <div className="flex justify-center">
-            <div className="px-1 sm:px-2 md:px-10 DM500 dashboardBlueText sm:text-xl">Day</div>
-            <div className="px-1 sm:px-2 md:px-10 DM500 dashboardBlueText sm:text-xl">Hr</div>
-            <div className="px-1 sm:px-2 md:px-10 DM500 dashboardBlueText sm:text-xl">Min</div>
-            <div className="px-1 sm:px-2 md:px-10 DM500 dashboardBlueText sm:text-xl">Sec</div>
+            <div className="px-1 sm:px-2 md:pl-8 md:pr-10 DM500 dashboardBlueText sm:text-xl">Day</div>
+            <div className="px-1 sm:px-2 md:pl-10 md:pr-6 DM500 dashboardBlueText sm:text-xl">Hr</div>
+            <div className="px-1 sm:px-2 md:pl-14 md:pr-14 DM500 dashboardBlueText sm:text-xl">Min</div>
+            <div className="px-1 sm:px-2 md:pl-8 md:pr-10 DM500 dashboardBlueText sm:text-xl">Sec</div>
           </div>
         </div>
         <div className="hidden flex justify-center mt-4">
