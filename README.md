@@ -47,9 +47,8 @@ yarn start
 **Authors:** <!-- [author1's name](link to their github profile), [author2's name](link to their github profile) .. -->  
 Rithvik https://github.com/rithvik2607
 Shreyas https://github.com/HelixW
+
 **Contributors:** <!-- Generate contributors list using this link - https://contributors-img.web.app/preview -->
 <a href="https://github.com/ACM-VIT/RC2020-Frontend/graphs/contributors">
   <img src="https://contributors-img.web.app/image?repo=ACM-VIT/RC2020-Frontend" />
 </a>
-
-Made with [contributors-img](https://contributors-img.web.app).
