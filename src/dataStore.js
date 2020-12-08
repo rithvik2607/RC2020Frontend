@@ -17,7 +17,7 @@ const INFO = [
   {
     id: 3,
     question: "What programming languages can be used?",
-    answer: "The participants can code in Java, C++ or Python based on their preferences."
+    answer: "The participants can code in Java, JavaScript, C, C++, Go, Kotlin, PHP or Python based on their preferences."
   },
   {
     id: 4,

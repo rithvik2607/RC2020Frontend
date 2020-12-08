@@ -62,13 +62,13 @@ class LoggedIn extends Component {
           error: response.data.error
         });
         sessionStorage.clear();
-        document.location.href = "https://acm-reverse-coding.web.app/";
+        document.location.href = "https://rcpc.acmvit.in";
         if(this.state.error) {
-          document.location.href = "https://acm-reverse-coding.web.app/";
+          document.location.href = "https://rcpc.acmvit.in";
         }
       }, (err) => {
         console.log(err);
-        document.location.href = "https://acm-reverse-coding.web.app/";
+        document.location.href = "https://rcpc.acmvit.in";
       })
   }
 
@@ -78,7 +78,7 @@ class LoggedIn extends Component {
       const authToken = url.searchParams.get("token");
       if(authToken === null) {
         sessionStorage.clear();
-        document.location.href = "https://acm-reverse-coding.web.app/";
+        document.location.href = "https://rcpc.acmvit.in";
       } else {
         sessionStorage.setItem("authToken", authToken);
       }
@@ -102,7 +102,7 @@ class LoggedIn extends Component {
       });
       if(this.state.error) {
         sessionStorage.clear();
-        window.location.href='https://acm-reverse-coding.web.app';
+        window.location.href='https://rcpc.acmvit.in';
       }
       if(this.state.teamID !== null) {
         this.setState({
@@ -112,11 +112,11 @@ class LoggedIn extends Component {
         });
       }
       if(sessionStorage.getItem('authToken') === null) {
-        window.location.href='https://acm-reverse-coding.web.app';
+        window.location.href='https://rcpc.acmvit.in';
       }
     }, (err) => {
       sessionStorage.clear();
-      window.location.href='https://acm-reverse-coding.web.app';
+      window.location.href='https://rcpc.acmvit.in';
     });
   }
 
