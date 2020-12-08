@@ -46,7 +46,7 @@ const Header = () => {
               data-aos-duration='300'
             >
               Join one of the
-              <p className='DM700 text-3xl lg:text-5xl rcBlue'>Biggest Competitve Coding</p>
+              <p className='DM700 text-3xl lg:text-5xl rcBlue'>Biggest Competitive Coding</p>
               event virtually
             </p>
             <p
