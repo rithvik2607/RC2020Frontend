@@ -58,6 +58,10 @@ body {
   border-radius: 0.5rem !important;
 }
 
+.is-expanded {
+  max-height: none !important;
+}
+
 .sponsor {
   color: #2bbf61;
   font-family: Montserrat;

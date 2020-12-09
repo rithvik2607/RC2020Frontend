@@ -60,10 +60,9 @@ class CTeam extends Component {
             <input 
               value={this.state.value} 
               onChange={this.handleChange} 
-              className="rounded-lg pl-1 bg-black block ring-2 h-8 w-40 lg:h-8 lg:w-64 ring-dashboardBlue focus:outline-none text-white"
+              className="rounded-lg pl-1 bg-black block ring-2 h-8 w-40 lg:h-8 lg:w-64 ring-dashboardBlue mb-6 focus:outline-none text-white"
             >
             </input>
-            <br />
             <button 
               onClick={this.handleSubmit} 
               className="dashboardBlue block px-6 py-2 h-10 w-40 lg:h-12 lg:w-64 rounded-lg focus:outline-none DM700 text-base lg:text-xl text-white"

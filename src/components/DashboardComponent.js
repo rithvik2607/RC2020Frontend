@@ -70,7 +70,7 @@ class Dashboard extends Component {
                 alt="crown" 
               />
             </p>
-            <div className="flex items-center">
+            <div className="flex justify-center items-center">
               <button 
                 onClick={this.leaveTeam} 
                 className="DM700 text-sm md:text-lg lg:text-xl focus:outline-none dashboardBlueText underline mb-4 sm:mb-0"

@@ -51,7 +51,7 @@ const FAQ = () => {
     <div>
       <section style={sectionStyle} className="pt-10 sm:pt-16">
         <div> 
-          <div data-aos="fade-down" data-aos-delay="50" data-aos-duration="300" className="rcBlue text-center DM700 text-4xl mb-0 sm:mb-10 md:mb-24 lg:text-4xl">Frequently Asked Questions</div>
+          <div data-aos="fade-down" data-aos-delay="50" data-aos-duration="300" className="rcBlue text-center DM700 text-3xl mb-0 sm:mb-10 md:mb-24 lg:text-4xl">Frequently Asked Questions</div>
         </div>
         <div
           data-aos="fade-up" 
