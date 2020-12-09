@@ -9,6 +9,7 @@ import {
 
 
 import { INFO } from '../dataStore';
+import Sponsors from './SponsorsComponent';
 
 var sectionStyle = {
   backgroundImage: `url(${Background})`,
@@ -63,6 +64,9 @@ const FAQ = () => {
         >
           {question}
         </AccordionWithHeader>
+      </div>
+      <div>
+        <Sponsors />
       </div>
       <div className="lg:flex lg:justify-evenly mt-16 mb-2">
         <a href="https://vit.ac.in/" target="_blank" rel="noopener noreferrer"><img className="my-4 h-16 w-48 mx-auto lg:mx-0" src="assets/images/vit-white-2.svg" alt="vit" /></a>
