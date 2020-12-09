@@ -57,7 +57,7 @@ class Dashboard extends Component {
             <p className="DM700 text-center sm:text-left text-xs md:text-lg lg:text-xl text-white">
               {this.props.name}
               <img 
-                className={"float-left sm:float-right px-2 md:mt-1 " + (this.props.isTeamLeader ? "visible" : "invisible")} 
+                className={"float-left sm:float-right px-2 md:mt-1 " + (this.props.isTeamLeader ? "block" : "hidden")} 
                 src="assets/images/Vector.svg" 
                 alt="crown" 
               />
@@ -65,12 +65,12 @@ class Dashboard extends Component {
             <p className="DM700 text-center sm:text-left text-xs md:text-lg lg:text-xl text-white">
               {this.props.teamMate}
               <img 
-                className={"float-left sm:float-right px-2 md:mt-1 " + (this.props.isTeamLeader ? "invisible" : "visible")} 
+                className={"float-left sm:float-right px-2 md:mt-1 " + (this.props.isTeamLeader ? "hidden" : "block")} 
                 src="assets/images/Vector.svg" 
                 alt="crown" 
               />
             </p>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center sm:justify-start items-center">
               <button 
                 onClick={this.leaveTeam} 
                 className="DM700 text-sm md:text-lg lg:text-xl focus:outline-none dashboardBlueText underline mb-4 sm:mb-0"
