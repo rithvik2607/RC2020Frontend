@@ -58,6 +58,18 @@ body {
   border-radius: 0.5rem !important;
 }
 
+.sponsor {
+  color: #2bbf61;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 400;
+
+}
+
+.room {
+  color: #e6720c;
+}
+
 .rcBlueBg {
   background: #4A90E2;
 }

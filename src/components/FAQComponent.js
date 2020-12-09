@@ -48,23 +48,25 @@ const FAQ = () => {
 
 
   return(
-    <section style={sectionStyle} className="pt-10 sm:pt-16">
-      <div> 
-        <div data-aos="fade-down" data-aos-delay="50" data-aos-duration="300" className="rcBlue text-center DM700 text-2xl mb-0 sm:mb-10 md:mb-24 lg:text-4xl">Frequently Asked Questions</div>
-      </div>
-      <div
-        data-aos="fade-up" 
-        data-aos-delay="150" 
-        data-aos-duration="300" 
-      >
-        <AccordionWithHeader 
-          actionCallback={actionCallback}
-          speed={100}
-          style={{marginBottom: 'none'}}
+    <div>
+      <section style={sectionStyle} className="pt-10 sm:pt-16">
+        <div> 
+          <div data-aos="fade-down" data-aos-delay="50" data-aos-duration="300" className="rcBlue text-center DM700 text-4xl mb-0 sm:mb-10 md:mb-24 lg:text-4xl">Frequently Asked Questions</div>
+        </div>
+        <div
+          data-aos="fade-up" 
+          data-aos-delay="150" 
+          data-aos-duration="300" 
         >
-          {question}
-        </AccordionWithHeader>
-      </div>
+          <AccordionWithHeader 
+            actionCallback={actionCallback}
+            speed={100}
+            style={{marginBottom: 'none'}}
+          >
+            {question}
+          </AccordionWithHeader>
+        </div>
+      </section>
       <div>
         <Sponsors />
       </div>
@@ -78,7 +80,7 @@ const FAQ = () => {
           <a target="_blank" rel="noopener noreferrer" className="px-4 mx-auto lg:m-0" href="https://www.instagram.com/acmvit/"><img src="assets/images/instagram.svg" alt="ig" /></a>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
