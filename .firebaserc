@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "acm-reverse-coding"
+  },
+  "targets": {
+    "acm-reverse-coding": {
+      "hosting": {
+        "test": [
+          "rcpc-test-site"
+        ]
+      }
+    }
   }
 }

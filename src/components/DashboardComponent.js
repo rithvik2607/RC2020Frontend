@@ -40,48 +40,48 @@ class Dashboard extends Component {
     return(
       <div className="mx-2 sm:mx-12 lg:mx-32">
         <div className="flex-col items-center justify-center flex sm:flex-row sm:items-stretch sm:justify-between">
-          <div 
-            data-aos="fade-up" 
-            data-aos-duration="300" 
+          <div
+            data-aos="fade-up"
+            data-aos-duration="300"
             data-aos-delay="100"
           >
             <p className="text-white DM700 text-center sm:text-left text-base md:text-2xl lg:text-3xl">Team</p>
             <p className="text-gray-500 DM700 dashboardBlueText text-sm md:text-3xl lg:text-5xl mb-4 sm:mb-0">{this.props.teamName}</p>
           </div>
-          <div 
-            data-aos="fade-up" 
-            data-aos-duration="300" 
+          <div
+            data-aos="fade-up"
+            data-aos-duration="300"
             data-aos-delay="150"
           >
             <p className="DM700 text-center sm:text-left text-base md:text-2xl lg:text-3xl text-white mb-2">Members</p>
             <p className="DM700 text-center sm:text-left text-xs md:text-lg lg:text-xl text-white">
               {this.props.name}
-              <img 
-                className={"float-left sm:float-right px-2 md:mt-1 " + (this.props.isTeamLeader ? "block" : "hidden")} 
-                src="assets/images/Vector.svg" 
-                alt="crown" 
+              <img
+                className={"float-left sm:float-right px-2 md:mt-1 " + (this.props.isTeamLeader ? "block" : "hidden")}
+                src="assets/images/Vector.svg"
+                alt="crown"
               />
             </p>
             <p className="DM700 text-center sm:text-left text-xs md:text-lg lg:text-xl text-white">
               {this.props.teamMate}
-              <img 
-                className={"float-left sm:float-right px-2 md:mt-1 " + (this.props.isTeamLeader ? "hidden" : "block")} 
-                src="assets/images/Vector.svg" 
-                alt="crown" 
+              <img
+                className={"float-left sm:float-right px-2 md:mt-1 " + (this.props.isTeamLeader ? "hidden" : "block")}
+                src="assets/images/Vector.svg"
+                alt="crown"
               />
             </p>
             <div className="flex justify-center sm:justify-start items-center">
-              <button 
-                onClick={this.leaveTeam} 
+              <button
+                onClick={this.leaveTeam}
                 className="DM700 text-sm md:text-lg lg:text-xl focus:outline-none dashboardBlueText underline mb-4 sm:mb-0"
               >
                 Leave team
               </button>
             </div>
           </div>
-          <div 
-            data-aos="fade-up" 
-            data-aos-duration="300" 
+          <div
+            data-aos="fade-up"
+            data-aos-duration="300"
             data-aos-delay="200"
           >
             <p className="DM700 text-center sm:text-left text-base md:text-2xl lg:text-3xl text-white mb-4">Team Code</p>
@@ -91,8 +91,8 @@ class Dashboard extends Component {
               >
                 {this.props.teamID}
               </div>
-              <button 
-                className="transform translate-x-20 -translate-y-9 sm:translate-x-20 sm:-translate-y-8 md:translate-x-24 md:-translate-y-8 lg:translate-x-28 lg:-translate-y-8" 
+              <button
+                className="transform translate-x-20 -translate-y-9 sm:translate-x-20 sm:-translate-y-8 md:translate-x-24 md:-translate-y-8 lg:translate-x-28 lg:-translate-y-8"
                 onClick={this.copyToClipboard}
               >
                 <img src="assets/images/copy.png" alt="copy" />
@@ -109,8 +109,8 @@ class Dashboard extends Component {
           </p>
           <br />
           <div className="flex justify-center">
-            <Countdown 
-              className="DM500 dashboardBlueText sticky text-xl sm:text-3xl md:text-7xl tracking-widest" 
+            <Countdown
+              className="DM500 dashboardBlueText sticky text-xl sm:text-3xl md:text-7xl tracking-widest"
               date = '2020-12-18T12:00:00'
             />
           </div>

@@ -16,11 +16,11 @@ const Header = () => {
             src='assets/images/logo.svg'
             alt='logo'
           />
-          <a href='https://reverse-coding-2020.herokuapp.com/auth/google'>
+          // <a href='https://reverse-coding-2020.herokuapp.com/auth/google'>
             <div className='hidden lg:block transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 rcBlueBg text-white DM400 text-justify'>
-              Register or Sign In
+              The event starts at 1 PM
             </div>
-          </a>
+          // </a>
         </div>
         <div className='mx-6 md:mx-16 lg:mx-32'>
           <div
@@ -61,7 +61,7 @@ const Header = () => {
               your way to success. This is Reverse Coding.
             </p>
             <a
-              href='https://reverse-coding-2020.herokuapp.com/auth/google'
+              // href='https://reverse-coding-2020.herokuapp.com/auth/google'
               className='mx-auto'
             >
               <div
@@ -71,7 +71,7 @@ const Header = () => {
                 data-aos-delay='150'
                 data-aos-duration='300'
               >
-                Register or Sign In
+                The event starts at 1 PM
               </div>
             </a>
           </div>
