@@ -6,8 +6,6 @@ var sectionStyle = {
   backgroundRepeat: 'no-repeat',
 }
 
-// https://rc-2020-portal.azurewebsites.net/auth/google
-
 const Header = () => {
   return (
     <section style={sectionStyle}>
@@ -18,9 +16,9 @@ const Header = () => {
             src='assets/images/logo.svg'
             alt='logo'
           />
-          <a href='#'>
+          <a href='https://rc-2020-portal.azurewebsites.net/auth/google'>
             <div className='hidden lg:block transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 rcBlueBg text-white DM400 text-justify'>
-              We'll be going live at 6PM IST
+              Start Round 1
             </div>
           </a>
         </div>
@@ -63,7 +61,7 @@ const Header = () => {
               your way to success. This is Reverse Coding.
             </p>
             <a
-              href='#'
+              href='https://rc-2020-portal.azurewebsites.net/auth/google'
               className='mx-auto'
             >
               <div
@@ -73,7 +71,7 @@ const Header = () => {
                 data-aos-delay='150'
                 data-aos-duration='300'
               >
-                We'll be going live at 6PM IST
+                Start Round 1
               </div>
             </a>
           </div>
