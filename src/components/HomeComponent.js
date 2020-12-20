@@ -18,7 +18,7 @@ const Header = () => {
           />
           <a href='https://rc-2020-portal.azurewebsites.net/auth/google'>
             <div className='hidden lg:block transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 rcBlueBg text-white DM400 text-justify'>
-              Start Round 1
+              Start Round 2
             </div>
           </a>
         </div>
@@ -71,7 +71,7 @@ const Header = () => {
                 data-aos-delay='150'
                 data-aos-duration='300'
               >
-                Start Round 1
+                Start Round 2
               </div>
             </a>
           </div>
