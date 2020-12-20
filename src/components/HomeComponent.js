@@ -57,20 +57,6 @@ const Header = () => {
               events in VIT and compete with the best talent. Reverse engineer
               your way to success. This is Reverse Coding.
             </p>
-            <a
-              href='https://rc-2020-portal.azurewebsites.net/auth/google'
-              className='mx-auto'
-            >
-              <div
-                className='block lg:hidden transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer rounded-lg px-6 py-4 rcBlueBg text-white text-base DM400 mt-8 text-center w-48 mx-auto lg:mx-0'
-                data-aos='fade-up'
-                data-aos-offset='0'
-                data-aos-delay='150'
-                data-aos-duration='300'
-              >
-                Start Round 1
-              </div>
-            </a>
           </div>
         </div>
       </div>
