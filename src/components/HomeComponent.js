@@ -16,11 +16,9 @@ const Header = () => {
             src='assets/images/logo.svg'
             alt='logo'
           />
-          <a href='https://rc-2020-portal.azurewebsites.net/auth/google'>
-            <div className='hidden lg:block transition duration-300 ease-in-out transform hover:scale-110 cursor-pointer rounded-lg px-8 py-2 rcBlueBg text-white DM400 text-justify'>
+            <div className='hidden lg:block transition duration-300 ease-in-out transform hover:scale-110 cursor-not-allowed rounded-lg px-8 py-2 rcBlueBg text-white DM400 opacity-50 text-justify'>
               Start Round 2
             </div>
-          </a>
         </div>
         <div className='mx-6 md:mx-16 lg:mx-32'>
           <div
