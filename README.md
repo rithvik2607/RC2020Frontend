@@ -25,7 +25,7 @@ A repo for the frontend for Reverse Coding 2020. Frontend for all 3 portals will
 
 <!-- Add one screenshot of your project (max height: 1000px, max size: 1mb) 'if applicable' under assets folder in root of your project ![sceenshot](assets/<name of image>) -->
 <!-- if your project has multiple pictures , merge them into one image using a tool similar to figma -->
-[screenshot](https://github.com/rithvik2607/RC2020Frontend/blob/master/build/rc.png)
+![screenshot](https://github.com/rithvik2607/RC2020Frontend/blob/master/build/rc.png)
 ---
 
 ## Usage
@@ -47,8 +47,3 @@ yarn start
 **Authors:** <!-- [author1's name](link to their github profile), [author2's name](link to their github profile) .. -->  
 Rithvik https://github.com/rithvik2607
 Shreyas https://github.com/HelixW
-
-**Contributors:** <!-- Generate contributors list using this link - https://contributors-img.web.app/preview -->
-<a href="https://github.com/ACM-VIT/RC2020-Frontend/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=ACM-VIT/RC2020-Frontend" />
-</a>
