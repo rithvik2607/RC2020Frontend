@@ -45,5 +45,5 @@ yarn start
 ## Authors
 
 **Authors:** <!-- [author1's name](link to their github profile), [author2's name](link to their github profile) .. -->  
-Rithvik [rithvik2607](https://github.com/rithvik2607)
-Shreyas [HelixW](https://github.com/HelixW)
+Rithvik **[rithvik2607](https://github.com/rithvik2607)** </br>
+Shreyas **[HelixW](https://github.com/HelixW)**
