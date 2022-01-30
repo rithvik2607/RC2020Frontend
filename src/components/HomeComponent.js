@@ -65,7 +65,7 @@ const Header = () => {
               className='mx-auto'
             >
               <div
-                className='block lg:hidden transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer rounded-lg px-6 py-4 rcBlueBg text-white text-base DM400 mt-8 text-center w-48 mx-auto lg:mx-0'
+                className='block lg:hidden transition duration-300 ease-in-out transform hover:scale-105 cursor-not-allowed rounded-lg px-6 py-4 rcBlueBg text-white text-base DM400 mt-8 text-center w-48 opacity-50 mx-auto lg:mx-0'
                 data-aos='fade-up'
                 data-aos-offset='0'
                 data-aos-delay='150'
