@@ -25,7 +25,7 @@ A repo for the frontend for Reverse Coding 2020. Frontend for all 3 portals will
 
 <!-- Add one screenshot of your project (max height: 1000px, max size: 1mb) 'if applicable' under assets folder in root of your project ![sceenshot](assets/<name of image>) -->
 <!-- if your project has multiple pictures , merge them into one image using a tool similar to figma -->
-[screenshot](assets/rc.png)
+[screenshot](https://github.com/rithvik2607/RC2020Frontend/blob/master/build/rc.png)
 ---
 
 ## Usage
